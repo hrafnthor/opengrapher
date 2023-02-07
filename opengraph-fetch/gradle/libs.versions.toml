@@ -2,9 +2,11 @@
 dependencyVersions = "0.43.0"
 junit = "4.13.2"
 jupiter = "5.6.2"
-kotlin = "1.8.0"
 kotest = "5.3.2"
+kotlin = "1.8.0"
+kotlinResult = "1.1.16"
 mavenPublish = "0.22.0"
+skrapeit = "1.1.5"
 
 [libraries]
 junit-junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -12,6 +14,8 @@ junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.r
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+michaelbull-result = { group = "com.michael-bull.kotlin-result", name = "kotlin-result", version.ref = "kotlinResult" }
+skrapeit = { group = "it.skrape", name = "skrapeit", version.ref = "skrapeit"}
 
 [plugins]
 benmanes-dependencyversions = { id = "com.github.ben-manes.versions", version.ref = "dependencyVersions" }
