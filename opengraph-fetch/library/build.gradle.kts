@@ -4,8 +4,9 @@ plugins {
 }
 
 dependencies {
+    api(libs.kotlinx.coroutines.core)
+    api(libs.michaelbull.result)
     implementation(libs.skrapeit)
-    implementation(libs.michaelbull.result)
 
     testImplementation(libs.kotest.runner.junit5)
     testImplementation(libs.kotest.assertions.core)
