@@ -39,6 +39,8 @@ allprojects {
     tasks.withType(KotlinCompile::class).configureEach {
         kotlinOptions {
             jvmTarget = JavaVersion.VERSION_1_8.toString()
+
+            compilerOptions.freeCompilerArgs.add("-Xexplicit-api=strict")
         }
     }
 }
