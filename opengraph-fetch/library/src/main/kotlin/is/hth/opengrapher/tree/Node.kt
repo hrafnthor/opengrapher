@@ -1,8 +1,7 @@
 package `is`.hth.opengrapher.tree
 
-internal class Node(
+internal data class Node(
     val key: String,
-    val value: String,
-) {
+    var value: String,
     val children: MutableList<Node> = mutableListOf()
-}
+)
