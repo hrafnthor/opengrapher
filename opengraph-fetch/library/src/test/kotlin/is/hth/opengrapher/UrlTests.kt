@@ -3,7 +3,7 @@ package `is`.hth.opengrapher
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.StringSpec
 
-internal class UrlTest : StringSpec({
+internal class UrlTests : StringSpec({
 
     "instantiate HttpUrl with 'http://' url prefix" {
         HttpUrl("http://")

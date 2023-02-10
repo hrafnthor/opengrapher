@@ -3,12 +3,11 @@ package `is`.hth.opengrapher
 @JvmInline
 public value class HttpUrl(public val url: String) {
     init {
-        require(url.startsWithAny(ignoreCase = true, "http://", "https://")) {
-            "HttpUrl requires the url to start with 'http://' or 'https://'"
+        require(url.startsWith(HTTP, ignoreCase = true) || url.startsWith(HTTPS, ignoreCase = true)) {
+            "HttpUrl requires the url to start with '$HTTP' or '$HTTPS'"
         }
     }
 }
 
-private fun String.startsWithAny(ignoreCase: Boolean, vararg values: String): Boolean {
-    return values.firstOrNull { startsWith(it, ignoreCase = ignoreCase) } != null
-}
+private const val HTTP = "http://"
+private const val HTTPS = "https://"
