@@ -5,7 +5,7 @@ import `is`.hth.opengrapher.OpenGrapher
 import kotlinx.coroutines.runBlocking
 import lumber.log.Lumber
 
-public fun main(args: Array<String>) {
+public fun main() {
     Lumber.plant(Lumber.DebugTree())
 
     runBlocking {
