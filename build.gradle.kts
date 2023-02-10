@@ -28,6 +28,7 @@ allprojects {
                 events("PASSED", "FAILED", "SKIPPED")
             }
             setExceptionFormat("full")
+            showStandardStreams = true
         }
     }
 
