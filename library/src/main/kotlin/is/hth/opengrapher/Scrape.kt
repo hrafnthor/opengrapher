@@ -7,7 +7,7 @@ import it.skrape.fetcher.*
 import it.skrape.selects.html5.meta
 
 internal suspend fun scrape(httpUrl: HttpUrl): Node {
-    return skrape(HttpFetcher) {
+    return skrape(AsyncFetcher) {
         request {
             url = httpUrl.url
             method = Method.GET
