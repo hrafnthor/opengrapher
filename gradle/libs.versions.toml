@@ -20,6 +20,7 @@ kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-cor
 hth-lumber = { group = "is.hth", name = "lumber", version.ref = "lumber" }
 michaelbull-result = { group = "com.michael-bull.kotlin-result", name = "kotlin-result", version.ref = "kotlinResult" }
 skrapeit = { group = "it.skrape", name = "skrapeit", version.ref = "skrapeit" }
+skrapeit-async = { group = "it.skrape", name = "skrapeit-asyn-fetcher", version.ref = "skrapeit" }
 
 [plugins]
 benmanes-dependencyversions = { id = "com.github.ben-manes.versions", version.ref = "dependencyVersions" }
