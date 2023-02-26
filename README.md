@@ -1,7 +1,7 @@
 # opengrapher
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue)](https://choosealicense.com/licenses/apache-2.0/)
-[![Maven Central](https://img.shields.io/maven-central/v/is.hth/opengrapher?color=blue)](https://central.sonatype.com/artifact/is.hth/opengrapher/0.0.1)
+[![Maven Central](https://img.shields.io/maven-central/v/is.hth/opengrapher?color=blue)](https://central.sonatype.com/artifact/is.hth/opengrapher/0.0.3)
 
 
 OpenGrapher is a small utility library for fetching and processing Open Graph information from webpages.
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'is.hth:opengrapher:0.0.2'
+  implementation 'is.hth:opengrapher:0.0.3'
 }
 ```
 
