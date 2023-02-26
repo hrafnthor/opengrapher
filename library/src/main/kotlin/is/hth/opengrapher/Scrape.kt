@@ -2,27 +2,14 @@ package `is`.hth.opengrapher
 
 import `is`.hth.opengrapher.tree.Node
 import `is`.hth.opengrapher.tree.add
-import it.skrape.core.document
-import it.skrape.fetcher.*
-import it.skrape.selects.html5.meta
+import org.jsoup.Jsoup
 
-internal suspend fun scrape(httpUrl: HttpUrl): Node {
-    return skrape(AsyncFetcher) {
-        request {
-            url = httpUrl.url
-            method = Method.GET
-        }
-        response { Node(key = "og", value = "").also(::toTree) }
+
+internal fun scrape(httpUrl: HttpUrl): Node {
+    val root = Node(key = "og", value = "")
+    val doc = Jsoup.connect(httpUrl.url).get()
+    doc.select("head > meta[property^=og]").map { element ->
+        add(key = element.attr("property"), value = element.attr("content"), root)
     }
-}
-
-private val openGraphRegex = "^og[:\\w]*\$".toRegex()
-
-private fun Result.toTree(root: Node) {
-    document.meta {
-        withAttributeKey = "property"
-        findAll { filter { it.attribute("property").matches(openGraphRegex) } }
-    }.forEach { element ->
-        add(key = element.attribute("property"), value = element.attribute("content"), root)
-    }
+    return root
 }
