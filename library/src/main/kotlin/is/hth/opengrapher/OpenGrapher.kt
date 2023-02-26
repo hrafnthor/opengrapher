@@ -15,7 +15,7 @@ public object OpenGrapher {
      * To have custom default values for fields that are not found, preconfigure the
      * supplied [OpenGraph] object with those fields.
      */
-    public suspend fun fetch(
+    public fun fetch(
         httpUrl: HttpUrl,
         default: OpenGraph = OpenGraph()
     ): OpenGraph = scrape(httpUrl).toGraph(default = default)
@@ -27,7 +27,7 @@ public object OpenGrapher {
      * To have custom default values for fields that are not found, preconfigure the
      * supplied [OpenGraph] object with those fields.
      */
-    public suspend fun fetchResult(
+    public fun fetchResult(
         httpUrl: HttpUrl,
         default: OpenGraph = OpenGraph()
     ): Result<OpenGraph, Throwable> =
