@@ -51,7 +51,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'is.hth:opengrapher:0.0.2-SNAPSHOT'
+  implementation 'is.hth:opengrapher:0.0.4-SNAPSHOT'
 }
 ```
 
